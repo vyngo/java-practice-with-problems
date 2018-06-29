@@ -5,6 +5,8 @@
  */
 package javapracticewithproblems;
 
+import javapracticewithproblems.arrays.MaxContigurousSubArray;
+
 /**
  *
  * @author vyndk
@@ -16,6 +18,8 @@ public class JavaPracticeWithProblems {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        int [] a = {-2, -3, 4, -1, -2, 1, 5, -3};
+        MaxContigurousSubArray.findMaxContigurousSubArray(a);
     }
     
 }
