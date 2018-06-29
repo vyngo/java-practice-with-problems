@@ -5,7 +5,7 @@
  */
 package javapracticewithproblems;
 
-import javapracticewithproblems.arrays.MaxContigurousSubArray;
+import javapracticewithproblems.arrays.ArraySolver;
 
 /**
  *
@@ -18,8 +18,10 @@ public class JavaPracticeWithProblems {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int [] a = {-2, -3, 4, -1, -2, 1, 5, -3};
-        MaxContigurousSubArray.findMaxContigurousSubArray(a);
+        int[] array = {1,2,3,4,5,6,8,9, 10};
+        int missingNumber = ArraySolver.findMissingNumber(array, 10);
+        System.out.println(missingNumber);
+        System.exit(0);
     }
     
 }

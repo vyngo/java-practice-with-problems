@@ -9,10 +9,10 @@ package javapracticewithproblems.arrays;
  *
  * @author vyndk
  */
-public class MaxContigurousSubArray {
+public class ArraySolver {
 
     /*
-    * find the subarray which has maximum sum
+    * find the subarray which has maximum sum,  Kadane's Algorithm
      */
     public static void findMaxContigurousSubArray(int[] array) {
         int maxSoFar = Integer.MIN_VALUE;
@@ -36,6 +36,19 @@ public class MaxContigurousSubArray {
         }
         System.out.println("Max value: " + maxSoFar);
         System.out.println("sub array: begin=" + begin + " end=" + end);
+    }
+
+    /*
+    * Find missing number in array from 1 to n
+     */
+    public static int findMissingNumber(int[] array, int n) {
+       
+        long expectedSum = (n * (n + 1)) / 2;
+        long realSum = 0l;
+        for (int element : array) {
+            realSum += element;
+        }
+        return (int)(expectedSum - realSum);
     }
 
 }
