@@ -18,9 +18,15 @@ public class JavaPracticeWithProblems {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int[] array = {1,2,3,4,5,6,8,9, 10};
-        int missingNumber = ArraySolver.findMissingNumber(array, 10);
-        System.out.println(missingNumber);
+        int[] array = {1, 4, 20, 3, 10, 5};
+        ArraySolver.findSubArrayWithGivenSum(array, 33);
+        
+        int[] array2 = {1, 4, 0, 0, 3, 10, 5};
+        ArraySolver.findSubArrayWithGivenSum(array2, 7);
+        
+        int[] array3 = {1, 4};
+        ArraySolver.findSubArrayWithGivenSum(array3, 0);
+       
         System.exit(0);
     }
     

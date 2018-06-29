@@ -42,13 +42,38 @@ public class ArraySolver {
     * Find missing number in array from 1 to n
      */
     public static int findMissingNumber(int[] array, int n) {
-       
+
         long expectedSum = (n * (n + 1)) / 2;
         long realSum = 0l;
         for (int element : array) {
             realSum += element;
         }
-        return (int)(expectedSum - realSum);
+        return (int) (expectedSum - realSum);
+    }
+
+    /*
+    * Given an unsorted array of non-negative integers, find a continuous sub-array which adds to a given number.
+    * Print start and end index of sub-array if exist else print -1
+     */
+    public static void findSubArrayWithGivenSum(int[] array, int sum) {
+        int n = array.length;
+        int currentSum = array[0];
+        int start = 0;
+        int end = 0;
+        for (int i = 1; i < n; i++) {
+            currentSum += array[i];
+            end = i;
+            while(currentSum > sum && start <= i){
+                currentSum -= array[start];
+                start++;
+            }
+            if(currentSum == sum && start < n){
+                System.out.println("Result: begin=" + start + " end=" + end);
+                return;
+            }
+            
+        }
+        System.out.println("-1");
     }
 
 }
