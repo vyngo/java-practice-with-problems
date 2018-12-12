@@ -5,7 +5,9 @@
  */
 package javapracticewithproblems;
 
-import javapracticewithproblems.arrays.ArraySolver;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -18,16 +20,38 @@ public class JavaPracticeWithProblems {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int[] array = {1, 4, 20, 3, 10, 5};
-        ArraySolver.findSubArrayWithGivenSum(array, 33);
-        
-        int[] array2 = {1, 4, 0, 0, 3, 10, 5};
-        ArraySolver.findSubArrayWithGivenSum(array2, 7);
-        
-        int[] array3 = {1, 4};
-        ArraySolver.findSubArrayWithGivenSum(array3, 0);
-       
+        System.out.println((int)'c');
         System.exit(0);
     }
     
+    
+
+    public static int odd(long num) {
+        // Write your code here
+        int odd_factors = 0;
+
+        for (long i = 1; 1 * i * i <= num; i++) {
+            if (num % i == 0) {
+
+                if (1 * i * i == num) {
+                    if ((i & 1) == 1) {
+                        odd_factors++;
+                    }
+                } else {
+                    if ((i & 1) == 1) {
+                        odd_factors++;
+                    }
+
+                    long factor = num / i;
+                    if ((factor & 1) == 1) {
+                        odd_factors++;
+                    }
+                }
+            }
+        }
+        return odd_factors - 1;
+
+    }
+    
+
 }
